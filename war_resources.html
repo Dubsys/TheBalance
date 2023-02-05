@@ -1,0 +1,531 @@
+<!DOCTYPE html><html lang=en><head><title>The Balance - war_resources</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);font-family:Whitney;font-weight:300}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);font-family:Whitney;font-weight:400}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);font-family:Whitney;font-weight:500}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);font-family:Whitney;font-weight:600}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);font-family:Whitney;font-weight:700}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reference-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reference{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reference-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reference-author{margin-right:0.3rem;font-weight:600}.chatlog__reference-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reference-link{cursor:pointer}.chatlog__reference-link *{display:inline;pointer-events:none}.chatlog__reference-link .chatlog__markdown-quote{display:inline}.chatlog__reference-link .chatlog__markdown-pre{display:inline}.chatlog__reference-link:hover{color:#ffffff}.chatlog__reference-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reference-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__bot-label{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-generic-image{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{border-radius:3px;padding:0 2px;color:#a3a6aa}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=channel-pinned-message-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=guild-member-join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=https://cdn.discordapp.com/icons/277897135515762698/45aba9eca8b8a501ed7d64f8dc3ee5d2.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>The Balance</div><div class=preamble__entry>FFXIV Resources / war_resources</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-593897245896605729 class=chatlog__message-container data-message-id=593897245896605729><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/54640302203342848/7a43ad05238adea1c8208effa07f9a31.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Mox#0007 data-user-id=54640302203342848>Mox</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-593897245896605729>28-Jun-19 06:15 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="Healerbtw" title="Healerbtw" src="https://cdn.discordapp.com/emojis/844472912731045949.png"> <strong>Welcome to WARRIOR</strong> <img loading="lazy" class="chatlog__emoji " alt="blobop" title="blobop" src="https://cdn.discordapp.com/emojis/363369094197805058.png"> 
+
+First off, <strong>Old content archive:</strong>
+Stormblood times: <a href="https://bit.ly/XIV4xTANKPINS">https://bit.ly/XIV4xTANKPINS</a> <img loading="lazy" class="chatlog__emoji " alt="blobwizard" title="blobwizard" src="https://cdn.discordapp.com/emojis/390324421937594369.png">
+Shadowbringer times: <a href="https://bit.ly/XIV5xTANKPINS">https://bit.ly/XIV5xTANKPINS</a> <img loading="lazy" class="chatlog__emoji " alt="blobwizard" title="blobwizard" src="https://cdn.discordapp.com/emojis/390324421937594369.png">
+
+Keep reading for more information!</span> <span class=chatlog__edited-timestamp title="01-Jan-22 12:47 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-926472420179738655 class=chatlog__message-container data-message-id=926472420179738655><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/54640302203342848/7a43ad05238adea1c8208effa07f9a31.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Mox#0007 data-user-id=54640302203342848>Mox</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-926472420179738655>01-Jan-22 12:50 AM</a></span></div><div class=chatlog__embed><a href=https://media.discordapp.net/attachments/925347949209333770/926245125238161438/WAR_Resources.png> <img class=chatlog__embed-generic-image src=https://media.discordapp.net/attachments/925347949209333770/926245125238161438/WAR_Resources.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926472475854929920 class=chatlog__message-container data-message-id=926472475854929920><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:50 AM">00:50</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Welcome</strong>
+Hi this is warrior resources for Lv90 warriors
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">There&#39;s a lot of information. Please read it all.
+If something is not answered here, ask in <span class="chatlog__markdown-mention">#war_questions</span>
+
+We also have a website now!
+<a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/">https://www.thebalanceffxiv.com/jobs/tanks/warrior/</a>
+
+<strong>i swear to god if the answer is here and you were just lazy i will bap</strong>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="27-Feb-22 10:19 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472495396179999 class=chatlog__message-container data-message-id=926472495396179999><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:50 AM">00:50</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">This channel will be updated with new graphics, links and content when possible.
+These updates will be shown in the Change Log™️
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926472515751125022 class=chatlog__message-container data-message-id=926472515751125022><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926246765315891240/Guides_and_Tools.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926246765315891240/Guides_and_Tools.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926472545920757761 class=chatlog__message-container data-message-id=926472545920757761><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Guides</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We&#39;ve tried to cover all your needs. You guys have a lot of needs.
+<a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/">https://www.thebalanceffxiv.com/jobs/tanks/warrior/</a>
+</div></div>
+Videos (lv90)
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We got a cute video too!
+<a href="https://youtu.be/C6CMTY1s0qk">https://youtu.be/C6CMTY1s0qk</a>
+</div></div>
+Leveling
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We have thrown these resources into an external website to help as many new Warriors as possible. Please see the link below!
+<a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/">https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/</a>
+</div></div>
+Basics
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">This channel. Also see our website and its resources!
+<a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/basic-guide/">https://www.thebalanceffxiv.com/jobs/tanks/warrior/basic-guide/</a>
+</div></div>
+Advanced
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention">#war_questions</span>, <span class="chatlog__markdown-mention">#war_encounter_archive</span>, also the website!
+<a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/advanced-guide/">https://www.thebalanceffxiv.com/jobs/tanks/warrior/advanced-guide/</a>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="17-Aug-22 05:48 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472569421443093 class=chatlog__message-container data-message-id=926472569421443093><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Tools</strong>
+Tank DPS Calculator
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Figuring out what you should be hitting in your gear.
+<a href="https://bit.ly/XIV-TANKDPSCALC-EW">https://bit.ly/XIV-TANKDPSCALC-EW</a>
+</div></div>
+Automagic Parse Analysis
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">XIVAnalysis is good for spotting the basic mistakes.
+Not using Food/Potion does not buff your parse by 20%.
+<a href="https://xivanalysis.com/">https://xivanalysis.com/</a>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926472593953914910 class=chatlog__message-container data-message-id=926472593953914910><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245125452099654/Openers.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245125452099654/Openers.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926472612505329686 class=chatlog__message-container data-message-id=926472612505329686><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Openers</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Last updated: 2022-04-27
+Good for: Patch 6.2
+</div></div>
+About Openers
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Special Opener shenanigans by <span class="chatlog__markdown-mention" title="Squall#0001">@Squall (Over Time)</span> 
+<a href="https://bit.ly/ew-war-openers">https://bit.ly/ew-war-openers</a>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Oct-22 04:05 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472634101817377 class=chatlog__message-container data-message-id=926472634101817377><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Assumed Timings
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Tomahawk starts at -0.70s and the pull starts at 0.00s
+- Party buffs are expected to be up at around 7.80s
+</div></div>Skill Speed requirements
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">&gt;=2.47 or slower for skill-to-skill copy.
+&lt;=2.45 and faster may move oGCDs slightly.
+</div></div>Potion
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Potion is expected to cover 12 GCDs at low Skill Speeds (&gt;2.47 GCD).
+Potion <em>can</em> cover 13 GCDs. Plan accordingly.
+</div></div>oGCDs
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Upheaval and Onslaughts are used late to catch Party buffs. 
+The expected timing for all buffs to be up is approximately 7.80s after Tomahawk lands.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="28-Apr-22 01:35 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472709540565042 class=chatlog__message-container data-message-id=926472709540565042><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>All-Around Opener</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">There&#39;s nothing special about this. This is your usual opener.
+The IR stacks last right until the 3rd Fell Cleave at 2.50 GCD.</div></div></span> <span class=chatlog__edited-timestamp title="28-Apr-22 01:30 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472725705408532 class=chatlog__message-container data-message-id=926472725705408532><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__edited-timestamp title="28-Apr-22 01:26 AM">(edited)</span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/277962807813865472/963548326433796116/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/277962807813865472/963548326433796116/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926472752876122183 class=chatlog__message-container data-message-id=926472752876122183><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:51 AM">00:51</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Note:
+Skipping Tomahawk is possible in fights where the boss&#39;s aggro range and/or positioning allows for a Run-In-Heavy-Swing. Make sure to Sprint.
+
+This changes the opener slightly; 
+- First Inner Chaos may be outside of party buffs.
+- Moving Infuriate to after Heavy Swing, resulting in the 3rd Infuriate to come up a GCD &quot;later&quot;. 
+- Fill in with a Heavy Swing if you&#39;re stuck waiting for Infuriate on faster Skill Speeds.
+
+The last IC should still be inside Potion.</code>
+<img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"> 
+<strong>Early-IR Opener</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Slightly worse than All-around Opener. Use this when you need IR up slightly earlier due to fight-specific reasons
+Requires a faster set (eg. 2.40 GCD).
+Expected to do 13 GCD Potion to fit in 3 IC.
+Does not require a Face Pull, but doing so should fit in 2IC 1Rend to most buffs.</div></div></span> <span class=chatlog__edited-timestamp title="04-Oct-22 07:22 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926472768692834304 class=chatlog__message-container data-message-id=926472768692834304><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:52 AM">00:52</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__edited-timestamp title="28-Apr-22 01:32 AM">(edited)</span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/583965306071023616/968622446498418758/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/583965306071023616/968622446498418758/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926472950356533288 class=chatlog__message-container data-message-id=926472950356533288><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:52 AM">00:52</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"> 
+<strong>Cursed Prepull IR</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Previews removed because you would ask me &quot;why does this exist?&quot;
+
+<strong>Do not use these</strong>, unless you know the very specific circumstances under which you would want to use them.
+I expect you to do your own adjustments for any fight-specific needs. There is no support for these openers.
+
+The main reasoning for the opener is to get IR on cooldown faster, gaining extra uses before specific fight phases.
+An example of this would be a heavy-padding Zodiark Extreme, where the aim is to get Inner Release for the Orbs.
+
+Tightest of the tightest timers are:
+IR at -9s
+Potion at -1s
+Pull at 0s</div></div></span></div></div></div></div><div id=chatlog__message-container-926473035756752937 class=chatlog__message-container data-message-id=926473035756752937><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"> 
+-9s IR into Eye:
+<a href="https://cdn.discordapp.com/attachments/583965306071023616/925063725193527306/unknown.png">https://cdn.discordapp.com/attachments/583965306071023616/925063725193527306/unknown.png</a>
+
+-9s IR into Tempest:
+<a href="https://cdn.discordapp.com/attachments/583965306071023616/926221989377609798/unknown.png">https://cdn.discordapp.com/attachments/583965306071023616/926221989377609798/unknown.png</a>
+<img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="27-Feb-22 12:35 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473041758785558 class=chatlog__message-container data-message-id=926473041758785558><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Cursed -29s IR into Rend</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">As above, previews removed because you must read to understand why we do/don&#39;t use these.
+
+Cursed <em>-29s IR into Rend</em> is (currently) used only during P3s, to start the fight with a Primal Rend. This is a slight gain only due to FFLogs cutting the Adds out of the parse, giving us ample time to realign for later parts of the fight.
+
+Timers:
+IR at -29s
+Potion at -2s
+Pull at 0s <em>with Primal Rend</em>
+</div></div>
+-29s IR into Rend:
+<a href="https://cdn.discordapp.com/attachments/583965306071023616/939467751079161877/unknown.png">https://cdn.discordapp.com/attachments/583965306071023616/939467751079161877/unknown.png</a></span> <span class=chatlog__edited-timestamp title="27-Feb-22 12:39 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473110444720181 class=chatlog__message-container data-message-id=926473110444720181><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji chatlog__emoji--large" alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="27-Feb-22 12:39 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473125728751637 class=chatlog__message-container data-message-id=926473125728751637><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png">
+Vengeance?
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Our 30% mitigation cooldown, Vengeance, provides us with some extra potency when used against Physical damage (originating from the Boss actor).
+As such, there may be fights where using Vengeance is completely free dps, especially in the opener.
+
+It should be used if all the following applies:
+- You don&#39;t need it for the next 120 seconds.
+- You&#39;re taking Physical damage from the Boss.
+
+Vengeance does NOT deal damage back when mitigating non-Physical damage.
+
+As Vengeance lasts for 15 seconds, we can crudely assume that it lasts for ~6 GCDs.
+In our Basic openers, a good moment to use Vengeance would be right after Storm&#39;s Eye. In the Early-IR Opener, said slot is used by Potion, so using Veng after Maim should do the trick. Adjust to your needs.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="28-Apr-22 01:38 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473146742231070 class=chatlog__message-container data-message-id=926473146742231070><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245125678579732/Rotation.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245125678579732/Rotation.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473179625578496 class=chatlog__message-container data-message-id=926473179625578496><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Rotation</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Priority system! Not a static, rigid rotation. We&#39;re flexible like that.
+Applies to Lv70, Lv80 and Lv90 Warriors.
+Warriors below Lv70, please get to Lv70 soon!
+</div></div>
+TLDR version
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Keep the buff up
+- Don&#39;t overcap on buff
+- Storm&#39;s Path to gain more gauge
+- Don&#39;t overcap gauge
+- Keep Upheaval on cooldown
+- Keep Inner Release on cooldown
+- Keep Onslaughts ticking (below 3 stacks)
+- Keep Infuriate ticking (below 2 stacks)
+- Burn gauge/stacks inside party buffs
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926473258625277993 class=chatlog__message-container data-message-id=926473258625277993><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:53 AM">00:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Rotation in many words</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We&#39;re a flexible job. Delaying resources for party buffs is what we do best. Only few things are set in stone.
+</div></div>
+Combos and breaking them
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Thanks to Endwalker, dropping a combo is really difficult now.
+Combo actions last 30 seconds before dropping.
+You can use Tomahawk and Gauge spenders between combo pieces.
+The only way to break the combo is to use a GCD from another combo, or to use the same combo GCD twice, or to use an earlier combo piece.  
+</div></div>
+Surging Tempest
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">+10% damage buff that we keep up. For more damage.
+Aim to refresh between 7-15 seconds.
+Stacks up to 60s. Use this to your advantage in fights with forced downtime.
+Inner Release gives +10s to the buff. Keep this in mind when refreshing.
+</div></div>
+Storm&#39;s Path and Storm&#39;s Eye
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Use Storm&#39;s Eye to get the buff up.
+Use Storm&#39;s Path to get more gauge.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="30-Jan-22 03:35 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473279559057418 class=chatlog__message-container data-message-id=926473279559057418><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:54 AM">00:54</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Beast Gauge
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Used for Fell Cleaves and Inner Chaoses.
+Don&#39;t throw the gauge away, try to spend it inside party buffs.
+Don&#39;t overcap. Using Storm&#39;s Path at 90 gauge gets you to 100 gauge. You can&#39;t have 110 gauge.
+Spend all of your gauge inside party buffs. Gather gauge between party buffs.
+</div></div>
+Inner Release
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Our &quot;Free Fell Cleaves&quot; button.
+Use it on cooldown, unless fight downtime would waste it.
+We get three stacks, to use Fell Cleave or Decimate. 
+Stacks last for 15 seconds.
+Don&#39;t drop any stacks by pushing in too much Inner Chaos / Primal Rend.
+</div></div>
+<img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="27-Apr-22 07:15 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473329014091796 class=chatlog__message-container data-message-id=926473329014091796><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:54 AM">00:54</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Primal Rend
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Locks us in place for the duration of the animation.
+It is possible to do a SINGLE oGCD after the animation without clipping the next GCD.
+Big hit, read the tooltip.
+It is possible to carry it for 30 seconds. Plan ahead. Consider saving it for party buffs, or burn it instantly inside the party buffs.
+Do not drop the Rend!
+</div></div>
+Upheaval
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Should be used on cooldown. It&#39;s on a 30s timer, meaning that it should hit every party buff.
+As long as those buffs are up every 60/120 seconds, that is.
+Doesn&#39;t matter if it&#39;s inside Inner Release or not. See the tooltip.
+</div></div>
+Onslaught
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Very useful as a Gap Closer, meaning that we can stick to the boss even when knocked back.
+We can stack up to three of them. They&#39;re on a 30s timer.
+We can do some fancy optimization around party buffs!
+With the current party buffs being mostly 120s, we aim to do 3-1 cycles of Onslaughts.
+Three Onslaughts into the opener, One Onslaught while waiting for the buffs to come up again.
+Repeat 3-1, 3-1.
+Don&#39;t let them sit on full stacks for long. That&#39;s DPS loss.
+</div></div>
+Infuriate
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We get two stacks, on a 60s timer.
+Unlocks Inner Chaos for 30 seconds.
+Spend them in party buffs. That&#39;s what they&#39;re for.
+It is possible to carry the Inner Chaos for 30 seconds. Do not drop it.
+Be mindful about using Infuriate inside Inner Release.
+- Don&#39;t drop IR stacks
+- Don&#39;t overcap (60g +Infuriate = sad WAR noises)</div></div></span> <span class=chatlog__edited-timestamp title="27-Apr-22 07:16 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473439483674674 class=chatlog__message-container data-message-id=926473439483674674><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:54 AM">00:54</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__edited-timestamp title="01-Jan-22 01:14 AM">(edited)</span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926478498485379102/AoE_header.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926478498485379102/AoE_header.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473555758186567 class=chatlog__message-container data-message-id=926473555758186567><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Single-target vs AoE
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">3 or more targets for AoE at lv90.
+If you&#39;re doing lv70/lv80 content, there&#39;s a section for you later on.
+</div></div>
+AoE in dungeons
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Overpower + Mythril Tempest combo to grab packs and get the buff up.
+- Orogeny when you&#39;re satisfied with your pull (3+ targets)
+- Decimate / Chaotic Cyclone (3+ targets)
+</div></div>
+Math and stuff
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Spreadsheet right here buddy! <a href="https://docs.google.com/spreadsheets/d/1w9c6BjGjpdWw0DENseJHvW2XasEWM4OhxDXShRUzn68/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1w9c6BjGjpdWw0DENseJHvW2XasEWM4OhxDXShRUzn68/edit?usp=sharing</a>
+</div></div>
+A quick lookup table
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Which skill should you use in what situation?
+Fear not, for we did the math for you!</div></div></span> <span class=chatlog__edited-timestamp title="04-Jan-22 08:35 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473601509638194 class=chatlog__message-container data-message-id=926473601509638194><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__edited-timestamp title="03-Nov-22 04:31 AM">(edited)</span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/1022209126346006588/1037418556096250026/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/1022209126346006588/1037418556096250026/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473688465956864 class=chatlog__message-container data-message-id=926473688465956864><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji chatlog__emoji--large" alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926473694778388520 class=chatlog__message-container data-message-id=926473694778388520><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245125921845289/Gauge_and_Rotato.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245125921845289/Gauge_and_Rotato.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473719621226576 class=chatlog__message-container data-message-id=926473719621226576><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Gauge and Rotation Management</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Warrior&#39;s gauge should not be spent willy-nilly. There must be a reason for using the gauge.
+</div></div>
+A couple of rules to mention first
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- We cannot reach &gt;=110 gauge. This will be referred to as &quot;overcapping&quot;.
+- Maim gives +10 gauge.
+- Storm&#39;s Path gives +20 gauge.
+- Storm&#39;s Eye gives +10 gauge.
+- Surging Tempest cannot reach &gt;60 seconds. This, too will be &quot;overcapping&quot;.
+- Infuriate gives +50 gauge.
+</div></div>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">With those rules in mind, we want to maximize our Beast Gauge generation, as our main sources of damage are locked behind Beast Gauge. We don&#39;t want to &quot;overcap&quot; anything, unless there&#39;s good reason.
+
+- Do not use Storm&#39;s Path at 90-100 gauge. Fell Cleave first.
+- Do not use Infuriate at 60-100 gauge. Fell Cleave first.
+- Do not use Storm&#39;s Eye at &gt;31 buff timer. Use other GCDs first.
+Some exceptions exist, but if you&#39;re reading these notes, you might not know any yet. These are often fight-specific.
+
+You may want to consider emptying your gauge as much as possible, before using Infuriate. This will let you use Infuriate, and carry the Inner Chaos into a later moment. More about this slightly later in this same section.
+</div></div>
+Using Beast Gauge
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Beast Gauge does not expire. This means that we can stock up for party buffs, and empty it all once there are buffs to take advantage of.
+
+You may feel compelled to use that 50 gauge on a Fell Cleave as soon as possible. As mentioned above, there is no reason to do so. You often lose out on free damage that could&#39;ve been gained by saving that Fell Cleave for buff windows.
+
+You should avoid overcapping as much as possible. This is achieved by using single Fell Cleaves every time your next GCD would make you overcap on your gauge.
+Sitting at 100 gauge, and next combo GCD is Maim/Path/Eye? Better Fell Cleave first.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="03-Nov-22 04:32 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473742031417354 class=chatlog__message-container data-message-id=926473742031417354><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Inner Release and Infuriate timer</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">It is beneficial to avoid hitting two full stacks of Infuriate, as to gain the full advantage of the timer ticking.
+
+Therefore, we may run into moments where our Infuriate would hit two stacks during Inner Release.
+</div></div>
+To avoid hitting 2 stacks of Infuriate, we will do the following math
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Inner Release lasts for 3 GCDs (2.50s each) =&gt; 7.5s
+- Each Fell Cleave pushes the timer forward by 5 seconds =&gt; 15s
+- A total of =&gt; 22.5s
+
+Having over 50 gauge pushes this timer forward by yet another GCD, that would be Fell Cleave.
+A total of =&gt; 30s
+
+As a note, this math expects that a single Fell Cleave pushes the Infuriate timer by 7.5 seconds (2.5s GCD + 5s Infuriate Trait)
+</div></div>
+So, to avoid hitting two Infuriate stacks during Inner Release, the following timers apply
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">&lt;=50 gauge:
+Infuriate should be &gt;22 seconds away.
+
+&gt;=60 gauge:
+Infuriate should be &gt;30 seconds away.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="19-Jan-22 08:37 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473761035796480 class=chatlog__message-container data-message-id=926473761035796480><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:55 AM">00:55</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Carrying Buffs</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">With Inner Release&#39;d Fell Cleaves being less impactful than Primal Rend and Inner Chaos, it may sometimes be worth it to carry these big hitters into a later moment.
+</div></div>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Using Inner Release unlocks Primal Rend for 30 seconds. If the fight favors using Inner Release early, but Party buffs are coming up later, you may want to carry that Rend into the buffs.
+</div></div>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Spending the Beast Gauge and using Infuriate puts us anywhere between 50 and 90 beast gauge. This lets us carry Inner Chaos into a slightly later moment, when party buffs would be up.
+Be mindful about the gauge, as you don&#39;t want to overcap; unless you know what you&#39;re doing, in which case why are you reading this?
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="15-Aug-22 07:05 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473779436212254 class=chatlog__message-container data-message-id=926473779436212254><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245126118993980/Healing.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245126118993980/Healing.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473796100182016 class=chatlog__message-container data-message-id=926473796100182016><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Introduction</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Warrior is the third healer of the party. With Bloodwhetting, Equilibrium, Nascent Flash and Shake It Off, we are blessed with the responsibilities of saving people who stand in stupid.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926473814597046322 class=chatlog__message-container data-message-id=926473814597046322><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Thrill of Battle (+20%)
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Affects Storm&#39;s Path&#39;s healing.
+- Affects Shake it Off&#39;s healing.
+- Affects Equilibrium&#39;s main heal and the HoT.
+- Does affect the Bloodwhetting&#39;s shield.
+- Does NOT affect Bloodwhetting heals.
+- Weird like that.
+</div></div>
+Shake It Off
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- 15% of Party Member&#39;s MaxHP as a Shield.
+- Also +2% for each buff eaten (Thrill, Vengeance, Bloodwhetting).
+- A maximum of 21% MaxHP Shield.
+- Also heals Party Members for 300 Potency.
+- Snapshots Thrill&#39;d WAR&#39;s HP, before eating the buff. Big Value™️ for Warriors.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="03-Feb-22 06:00 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473829222608908 class=chatlog__message-container data-message-id=926473829222608908><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Bloodwhetting
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Get 4 GCDs in by popping this in the 2nd oGCD slot.
+- Heals <em>per hit</em>, very powerful in dungeons.
+- May Crit a heal randomly. Luck!
+- Primal Rend, Chaotic Cyclone and Inner Chaos always force a Crit heal.
+- Inner Release&#39;d skills do NOT force a Crit heal.
+- Thrill of Battle does NOT increase the healing from these.
+- Initial mitigation is 19% due to diminishing returns (100 x 0.9 x 0.9 = 81).
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="15-Aug-22 05:33 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473845660082256 class=chatlog__message-container data-message-id=926473845660082256><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Nascent Flash
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Goes on a friend
+- Gives them the mitigation, much like Bloodwhetting would give to us
+- Save a friend with this!
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926473857873887252 class=chatlog__message-container data-message-id=926473857873887252><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Forcing Crits
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Inner Chaos, Chaotic Cyclone, and Primal Rend force a Crit heal.
+- This may save a life.
+- Be the healer of the party.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="15-Aug-22 05:33 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926473875255091221 class=chatlog__message-container data-message-id=926473875255091221><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245286479822878/Melds_n_Stats.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245286479822878/Melds_n_Stats.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926473902539034734 class=chatlog__message-container data-message-id=926473902539034734><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Stat Priority and Melds</strong>
+Warriors are Strength-based. Vitality is nice too.
+
+Universal Stat Priorities are:
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Weapon Damage &gt;&gt;&gt; Main Stat &gt;&gt;&gt;&gt; Substats.
+<em>very few exceptions have existed before Endwalker</em>.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926473920184483942 class=chatlog__message-container data-message-id=926473920184483942><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:56 AM">00:56</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Warrior Substat priority and melds
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><code class="chatlog__markdown-pre chatlog__markdown-pre--inline">Crit &gt; comfy SkS &gt; DH &gt;= Det &gt; Tnc</code>
+Be mindful of stat tiers when melding.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Aug-22 01:36 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474066653761596 class=chatlog__message-container data-message-id=926474066653761596><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>What happened with Direct Hit not being desireable? 
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Patch 6.2 made DHit provide bonus damage to skills that have 100% Direct Hit and 100% Critical Hit rates.
+After 2 full expacs, DHit is good for us again.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Aug-22 01:38 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474082655010847 class=chatlog__message-container data-message-id=926474082655010847><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why Tenacity?
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Tenacity increases all damage dealt, much like Determination. While it offers some mitigation bonuses, it is often very little and near impossible to observe due to the game already having a 5% variance in incoming damage.
+</div></div>
+Stats in general (Det vs Tnc example)
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">To gain +0.1% damage, we need to reach the next break point. 
+We will refer to these +0.1% gains as &quot;tiers&quot;.
+
+These are approximately as follows:
+- 13.57 points of Determination
+- 19 points of Tenacity
+
+To extrapolate from this, it follows that Determination gives us more damage than Tenacity, when limited to an arbitrary amount of stat points.
+
+If we were to have 2000 points to use on either Determination or Tenacity, we would get:
+2000 / 13.57 = ~147 tiers of Det
+2000 / 19 = ~104 tiers of Tnc
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Aug-22 01:39 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474097377042444 class=chatlog__message-container data-message-id=926474097377042444><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Skill Speed
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">We don&#39;t need it, but we might still want some. 
+Mostly for comfy reasons such as fight phasing or oGCD lineups etc.
+oGCD lineups referring to situations where our GCD and oGCDs come up at the same time, forcing us to delay one or the other.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Aug-22 01:35 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474114347180073 class=chatlog__message-container data-message-id=926474114347180073><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Multi-tank melds
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Patch 6.2 brought Direct Hit melds back to WAR!
+
+While WARs try to hit GCD numbers around 2.50, 2.45, 2.40, other tanks might have more specific numbers.
+While melding for multiple tanks, consider what skill speed you want to use on GNB, PLD or DRK.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="26-Aug-22 01:34 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474132332347443 class=chatlog__message-container data-message-id=926474132332347443><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245286823731210/Gear_and_foodpot.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245286823731210/Gear_and_foodpot.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926474157942800414 class=chatlog__message-container data-message-id=926474157942800414><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Gear and Consumables</strong>
+
+Food and Potions
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Carrot Pudding HQ, or
+Sunset Carrot Nibbles HQ.
+Grade 7 Tincture of Strength HQ.
+</div></div>
+Skill Speed
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">2.5: No drift but slow.
+2.45/2.46: Drifts every other IR
+2.4: Drifts Upheaval
+</div></div>
+<img loading="lazy" class="chatlog__emoji " alt="Healerbtw" title="Healerbtw" src="https://cdn.discordapp.com/emojis/844472912731045949.png"> <strong>Patch 6.2 BIS sets</strong>
+
+2.5 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/f3f765a3-56a5-446e-b1e1-1c7cdd23f24b">https://etro.gg/gearset/f3f765a3-56a5-446e-b1e1-1c7cdd23f24b</a>
+Img: <a href="https://cdn.discordapp.com/attachments/1022209126346006588/1027263975668338818/unknown.png">https://cdn.discordapp.com/attachments/1022209126346006588/1027263975668338818/unknown.png</a>
+</div></div>
+2.46 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/95b030ff-0ab3-4954-831c-99cabb94ff16">https://etro.gg/gearset/95b030ff-0ab3-4954-831c-99cabb94ff16</a>
+Img: <a href="https://cdn.discordapp.com/attachments/1022209126346006588/1027264014864097320/unknown.png">https://cdn.discordapp.com/attachments/1022209126346006588/1027264014864097320/unknown.png</a>
+</div></div>
+2.45 GCD: Sunset Nibbles
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/95e676d3-3013-44b6-be05-910c86363f60">https://etro.gg/gearset/95e676d3-3013-44b6-be05-910c86363f60</a>
+Img: <a href="https://cdn.discordapp.com/attachments/1022209126346006588/1027264030122971216/unknown.png">https://cdn.discordapp.com/attachments/1022209126346006588/1027264030122971216/unknown.png</a>
+</div></div>
+2.40 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/388ef835-f18b-4e18-994b-b1d5fa83aa12">https://etro.gg/gearset/388ef835-f18b-4e18-994b-b1d5fa83aa12</a>
+Img: <a href="https://cdn.discordapp.com/attachments/1022209126346006588/1027264045105037324/unknown.png">https://cdn.discordapp.com/attachments/1022209126346006588/1027264045105037324/unknown.png</a>
+</div></div>
+
+<img loading="lazy" class="chatlog__emoji " alt="Healerbtw" title="Healerbtw" src="https://cdn.discordapp.com/emojis/844472912731045949.png">  <strong>Patch 6.2 Prog sets</strong>
+
+Prog 2.5 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/268518ec-ec1c-4455-8841-36319d06af76">https://etro.gg/gearset/268518ec-ec1c-4455-8841-36319d06af76</a>
+Img: <a href="https://cdn.discordapp.com/attachments/583965306071023616/1013574357211168848/unknown.png">https://cdn.discordapp.com/attachments/583965306071023616/1013574357211168848/unknown.png</a>
+</div></div>
+Prog 2.46 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/a1c69e11-193b-44e2-b68a-e53d1c91219f">https://etro.gg/gearset/a1c69e11-193b-44e2-b68a-e53d1c91219f</a>
+Img: <a href="https://cdn.discordapp.com/attachments/583965306071023616/1013573271784001696/unknown.png">https://cdn.discordapp.com/attachments/583965306071023616/1013573271784001696/unknown.png</a>
+</div></div>
+Prog 2.45 GCD: Carrot Pudding
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/fde6a8cc-46d3-4ed3-9f92-d1f940fdf6b1">https://etro.gg/gearset/fde6a8cc-46d3-4ed3-9f92-d1f940fdf6b1</a>
+Img: <a href="https://cdn.discordapp.com/attachments/277962807813865472/1013728567441510462/6194.png">https://cdn.discordapp.com/attachments/277962807813865472/1013728567441510462/6194.png</a>
+</div></div>
+Prog 2.40 GCD: Sunset Nibbles
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Etro: <a href="https://etro.gg/gearset/72da57ea-94e6-42f3-848a-950d28f4c3ce">https://etro.gg/gearset/72da57ea-94e6-42f3-848a-950d28f4c3ce</a>
+Img: <a href="https://cdn.discordapp.com/attachments/824404311643390002/1013756376692047912/unknown.png">https://cdn.discordapp.com/attachments/824404311643390002/1013756376692047912/unknown.png</a>
+</div></div>
+Patch 6.11 archive:
+<a href="https://pastebin.com/pDWaPnAh">https://pastebin.com/pDWaPnAh</a>
+<img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="06-Oct-22 04:01 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474183544819742 class=chatlog__message-container data-message-id=926474183544819742><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="teamorning" title="teamorning" src="https://cdn.discordapp.com/emojis/669953920885456897.png"> <strong>Ultimates Best In Slot</strong> <img loading="lazy" class="chatlog__emoji " alt="peepoDragonQuest" title="peepoDragonQuest" src="https://cdn.discordapp.com/emojis/762083918861041714.gif"> 
+
+Gear Sets
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Patch: 6.3
+Most DPS numbers have not been updated for 6.21 and onwards. These are mentioned in the spreadsheet.
+Sets are still valid, just skill potency increases in the past patches.
+
+BIS sets for UCOB / UWU / TEA / DSW can be found in the link below: 
+<a href="https://bit.ly/XIV-EW-Warrior-Ulti">https://bit.ly/XIV-EW-Warrior-Ulti</a>
+
+Due to the game having multiple options for each item slot, most of the pieces are shown as &quot;Synced (Substat1 / Substat2)&quot;.
+
+Synced Item means that the specific gear piece has high enough item level, and the stats recommended. A list of options for each item slot can be found in:
+<a href="https://xiv.sleepyshiba.com/pld/img/70sync.png">https://xiv.sleepyshiba.com/pld/img/70sync.png</a>
+</div></div>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Please enjoy this image regarding Item Level Sync <img loading="lazy" class="chatlog__emoji " alt="PaissaScientist" title="PaissaScientist" src="https://cdn.discordapp.com/emojis/708905534736302101.png"> 
+The tankdpscalc can be found in <span class="chatlog__markdown-mention">#&#128216;tank_resources</span>, one of the top messages.
+<a href="https://cdn.discordapp.com/attachments/277962807813865472/929863898067238952/unknown.png">https://cdn.discordapp.com/attachments/277962807813865472/929863898067238952/unknown.png</a>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="11-Jan-23 09:40 PM">(edited)</span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/277962807813865472/929863898067238952/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/277962807813865472/929863898067238952/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926474203450974228 class=chatlog__message-container data-message-id=926474203450974228><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:57 AM">00:57</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245287129907210/Lv70Lv80Stuff.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245287129907210/Lv70Lv80Stuff.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926474351589601290 class=chatlog__message-container data-message-id=926474351589601290><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:58 AM">00:58</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Lv70 and Lv80 Guidance</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">For older content such as UCOB, UWU and TEA.
+
+Enjoy our <span class="chatlog__markdown-mention">#war_encounter_archive</span> threads for now.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="04-Sep-22 08:21 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474376117887007 class=chatlog__message-container data-message-id=926474376117887007><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:58 AM">00:58</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Lv70</strong>, also known as the Stormblood era.
+
+Opener
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/#70-71-unleash-the-inner-release">https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/#70-71-unleash-the-inner-release</a>
+</div></div>
+Rotation priority
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Storm&#39;s Tempest up
+- Inner Release on cooldown
+- Upheaval on cooldown
+- Don&#39;t let Infuriate and Onslaught sit on 2 stacks
+- Storm&#39;s Path for gauge
+- Storm&#39;s Eye refresh at &lt;15s
+- Infuriate does not grant Inner Chaos at this level. Using Infuriate inside IR is acceptable.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="04-Sep-22 09:59 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474406434332703 class=chatlog__message-container data-message-id=926474406434332703><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:58 AM">00:58</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Lv80</strong>, also known as the Shadowbringers era.
+
+Opener
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><a href="https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/#80-inner-chaos">https://www.thebalanceffxiv.com/jobs/tanks/warrior/leveling-guide/#80-inner-chaos</a>
+</div></div>
+Rotation priority
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">- Much like Lv70
+- Infuriate now grants Inner Chaos. 
+</div></div>
+<img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"> <img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="04-Sep-22 09:59 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474425044447316 class=chatlog__message-container data-message-id=926474425044447316><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:58 AM">00:58</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926248148081442867/Fights_and_Fun.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926248148081442867/Fights_and_Fun.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926474448763236362 class=chatlog__message-container data-message-id=926474448763236362><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:58 AM">00:58</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Specific Fight Content</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Refer to <span class="chatlog__markdown-mention">#war_encounter_archive</span> 
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="10-Jul-22 08:42 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926474732960907324 class=chatlog__message-container data-message-id=926474732960907324><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 12:59 AM">00:59</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>See Pinned Messages
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">On mobile, swipe from right-to-left in the correct channel.
+On desktop, click as shown in the image.</div></div></span></div></div></div></div><div id=chatlog__message-container-926475044991950888 class=chatlog__message-container data-message-id=926475044991950888><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:01 AM">01:01</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926475013316575332/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926475013316575332/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926475351490703380 class=chatlog__message-container data-message-id=926475351490703380><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Use Threads
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">As mentioned above, mobile users get to swipe from right-to-left in the channels.
+On desktop, click as shown in the image.</div></div></span></div></div></div></div><div id=chatlog__message-container-926475358595866634 class=chatlog__message-container data-message-id=926475358595866634><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926475229100916826/unknown.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926475229100916826/unknown.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926475368012062780 class=chatlog__message-container data-message-id=926475368012062780><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji chatlog__emoji--large" alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926475386081136690 class=chatlog__message-container data-message-id=926475386081136690><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245287742300230/Macros.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245287742300230/Macros.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926475417064468502 class=chatlog__message-container data-message-id=926475417064468502><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Macros</strong>
+How do Macros work?
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention">#&#128216;tank_resources</span> has a full write-up.
+TLDR: 
+Game&#39;s haunted, client-side, one line per in-game rendered frame.
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926475459896700949 class=chatlog__message-container data-message-id=926475459896700949><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Holmgang
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Holmgang is weird:
+1) If your Holmgang target dies, you lose the effect. Self-cast gets around this.
+2) If your target is too far away, you won&#39;t be able to cast Holmgang. Self-cast gets around this, too.
+To achieve both goals, we self-cast using <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">&lt;me&gt;</code> in the macro!
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">/merror off
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/ac &quot;Holmgang&quot; &lt;me&gt;
+/micon &quot;Holmgang&quot;</code>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span> <span class=chatlog__edited-timestamp title="02-Jan-22 05:37 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-926475491295248454 class=chatlog__message-container data-message-id=926475491295248454><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Nascent Flash
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Nascent Flash goes on a friend. Most often on the co-tank of your 8-man party.
+They are, by default, the 2nd member in your party list, which is what the <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">&lt;2&gt;</code> refers to.
+You may make a Mouse-over macro by using <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">&lt;mo&gt;</code>, or you may make multiple macros for each of your party member by using <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">&lt;3&gt;</code>, <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">&lt;4&gt;</code>, etc.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">/merror off
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/ac &quot;Nascent Flash&quot; &lt;2&gt;
+/micon &quot;Nascent Flash&quot;</code>
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926475558328619068 class=chatlog__message-container data-message-id=926475558328619068><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:03 AM">01:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Shirk
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">You rarely use Shirk on anyone but your co-tank.
+The macro can be found in <span class="chatlog__markdown-mention">#&#128216;tank_resources</span> 
+Sorry, gotta avoid duplication of information!
+</div></div><img loading="lazy" class="chatlog__emoji " alt="blank" title="blank" src="https://cdn.discordapp.com/emojis/846622384739057684.png"></span></div></div></div></div><div id=chatlog__message-container-926475576234115092 class=chatlog__message-container data-message-id=926475576234115092><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:03 AM">01:03</div></div><div class=chatlog__message-primary><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926245288073642025/ToC.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926245288073642025/ToC.png alt="Embedded image" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-926477679811764304 class=chatlog__message-container data-message-id=926477679811764304><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/107256979105267712/51f93181919aa4ac2b552165fe864c95.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(175,179,255) title="Kupo Bot#2093" data-user-id=107256979105267712>Kupo Bot</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-926477679811764304>01-Jan-22 01:11 AM</a></span></div><div class=chatlog__embed><div class=chatlog__embed-color-pill style=background-color:rgba(26,188,156,255)></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><div class="chatlog__markdown chatlog__markdown-preserve">Warrior Resources</div></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve"><img loading="lazy" class="chatlog__emoji " alt="Healerbtw" title="Healerbtw" src="https://cdn.discordapp.com/emojis/844472912731045949.png"> Join us in <a href="https://discord.gg/thebalanceffxiv">The Balance</a> <img loading="lazy" class="chatlog__emoji " alt="Healerbtw" title="Healerbtw" src="https://cdn.discordapp.com/emojis/844472912731045949.png"> 
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926472420179738655" onclick="scrollToMessage(event, '926472420179738655')">To the Top</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926472515751125022" onclick="scrollToMessage(event, '926472515751125022')">Guides and Tools</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926472593953914910" onclick="scrollToMessage(event, '926472593953914910')">Openers</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926473146742231070" onclick="scrollToMessage(event, '926473146742231070')">Rotation</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926473694778388520" onclick="scrollToMessage(event, '926473694778388520')">Gauge and Rotato Management</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926473779436212254" onclick="scrollToMessage(event, '926473779436212254')">Healing</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926473875255091221" onclick="scrollToMessage(event, '926473875255091221')">Melds and Stats</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926474132332347443" onclick="scrollToMessage(event, '926474132332347443')">Gear and Consumables</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926474203450974228" onclick="scrollToMessage(event, '926474203450974228')">Lv70 / Lv80 Guidance</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926474425044447316" onclick="scrollToMessage(event, '926474425044447316')">Encounters</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926475386081136690" onclick="scrollToMessage(event, '926475386081136690')">Macros</a>
+
+✎<a href="https://discord.com/channels/277897135515762698/580300071061553182/926475576234115092" onclick="scrollToMessage(event, '926475576234115092')">Table of Contents</a></div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-2.discordapp.net/external/jZQBbuAcmGkM28NV1MdwJrzL67pHhcH2Rv1_k5wg8tM/http/kupobot.com/static/images/kupobot-info-2.png> <img class=chatlog__embed-thumbnail src=https://images-ext-2.discordapp.net/external/jZQBbuAcmGkM28NV1MdwJrzL67pHhcH2Rv1_k5wg8tM/http/kupobot.com/static/images/kupobot-info-2.png alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-926478721370714122 class=chatlog__message-container data-message-id=926478721370714122><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/54640302203342848/7a43ad05238adea1c8208effa07f9a31.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Mox#0007 data-user-id=54640302203342848>Mox</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-926478721370714122>01-Jan-22 01:15 AM</a></span></div><div class=chatlog__embed><a href=https://cdn.discordapp.com/attachments/925347949209333770/926478508472016906/changelog.png> <img class=chatlog__embed-generic-image src=https://cdn.discordapp.com/attachments/925347949209333770/926478508472016906/changelog.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-926478737220976660 class=chatlog__message-container data-message-id=926478737220976660><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01-Jan-22 01:15 AM">01:15</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>2021-12-31
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">OG release of the fresh <span class="chatlog__markdown-mention">#war_resources</span> for Endwalker <img loading="lazy" class="chatlog__emoji " alt="IC" title="IC" src="https://cdn.discordapp.com/emojis/737787662802485320.png"><img loading="lazy" class="chatlog__emoji " alt="blobop" title="blobop" src="https://cdn.discordapp.com/emojis/363369094197805058.png"></div></div></span></div><div class=chatlog__reactions><div class=chatlog__reaction title=Healerbtw><img class="chatlog__emoji chatlog__emoji--small" alt=Healerbtw src=https://cdn.discordapp.com/emojis/844472912731045949.png loading=lazy> <span class=chatlog__reaction-count>1877</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1034513940392198194 class=chatlog__message-container data-message-id=1034513940392198194><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/54640302203342848/7a43ad05238adea1c8208effa07f9a31.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Mox#0007 data-user-id=54640302203342848>Mox</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1034513940392198194>26-Oct-22 04:09 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>2022-10-25
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Added a smol doc about openers to the Openers section <img loading="lazy" class="chatlog__emoji " alt="BlobWarrior" title="BlobWarrior" src="https://cdn.discordapp.com/emojis/363127545396199425.png">
+Also cleaned up the Changelog section so people don&#39;t have to scroll up so much.</div></div></span> <span class=chatlog__edited-timestamp title="26-Oct-22 04:09 AM">(edited)</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=BlobWarrior><img class="chatlog__emoji chatlog__emoji--small" alt=BlobWarrior src=https://cdn.discordapp.com/emojis/363127545396199425.png loading=lazy> <span class=chatlog__reaction-count>130</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1062815323625099356 class=chatlog__message-container data-message-id=1062815323625099356><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/54640302203342848/7a43ad05238adea1c8208effa07f9a31.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Mox#0007 data-user-id=54640302203342848>Mox</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1062815323625099356>12-Jan-23 06:28 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>2023-01-11 
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Added new DSR BIS sets in the Gear and Consumables post:
+<a href="https://discord.com/channels/277897135515762698/580300071061553182/926474183544819742" onclick="scrollToMessage(event, '926474183544819742')">https://discord.com/channels/277897135515762698/580300071061553182/926474183544819742</a></div></div></span></div><div class=chatlog__reactions><div class=chatlog__reaction title=bcaBoredRoll><img class="chatlog__emoji chatlog__emoji--small" alt=bcaBoredRoll src=https://cdn.discordapp.com/emojis/784649322422730784.gif loading=lazy> <span class=chatlog__reaction-count>24</span></div></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 70 message(s)</div></div>

@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang=en><head><title>The Balance - brd_resources</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);font-family:Whitney;font-weight:300}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);font-family:Whitney;font-weight:400}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);font-family:Whitney;font-weight:500}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);font-family:Whitney;font-weight:600}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);font-family:Whitney;font-weight:700}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reference-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reference{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reference-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reference-author{margin-right:0.3rem;font-weight:600}.chatlog__reference-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reference-link{cursor:pointer}.chatlog__reference-link *{display:inline;pointer-events:none}.chatlog__reference-link .chatlog__markdown-quote{display:inline}.chatlog__reference-link .chatlog__markdown-pre{display:inline}.chatlog__reference-link:hover{color:#ffffff}.chatlog__reference-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reference-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__bot-label{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-generic-image{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{border-radius:3px;padding:0 2px;color:#a3a6aa}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=channel-pinned-message-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=guild-member-join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=https://cdn.discordapp.com/icons/277897135515762698/45aba9eca8b8a501ed7d64f8dc3ee5d2.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>The Balance</div><div class=preamble__entry>FFXIV Resources / brd_resources</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-923923325451919401 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923923325451919401><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/151526095722774530/a1910aa9529e2aa7f940b376ba4dc225.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(216,139,170) title=Cetonis#8918 data-user-id=151526095722774530>Sana Cetonis</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-923923325451919401>25-Dec-21 12:01 AM</a></span></div><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923923324642402314/IntroX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923923324642402314/IntroX.png alt="Image attachment" title="Image: IntroX.png (10.91 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923348927418390 class=chatlog__message-container data-message-id=923923348927418390><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:01 AM">00:01</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Welcome <img loading="lazy" class="chatlog__emoji " alt="wavemorning" title="wavemorning" src="https://cdn.discordapp.com/emojis/710313700434640996.gif"> 
+
+Here you&#39;ll find guides, tips, gearing information, FAQs and more related to playing Bard in Endwalker. 
+
+If you have a question that you can&#39;t find answered here or in one of the guides, feel free to drop by <span class="chatlog__markdown-mention">#brd_questions</span> and ask! Or <span class="chatlog__markdown-mention">#brd_backstage</span> if you have some fight-specific or really nitty gritty math question.
+
+The main navigation is at the bottom, or you can check the pins to jump around that way.
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>Guides</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> 
+
+<strong>Bard leveling guide</strong> - <a href="https://bit.ly/3P2Rnlu">https://bit.ly/3P2Rnlu</a>
+
+<strong>Bard level 90 basics guide</strong> - <a href="https://bit.ly/3EcK193">https://bit.ly/3EcK193</a>
+
+<strong>Bard advanced level 90 guide</strong> - <a href="https://bit.ly/3s2xYa9">https://bit.ly/3s2xYa9</a>
+
+<strong>Balance website Bard landing page</strong> - <a href="https://bit.ly/329qM3j">https://bit.ly/329qM3j</a>
+
+<strong>Video guide from Julia</strong> - <a href="https://bit.ly/3FHpPOH">https://bit.ly/3FHpPOH</a>
+
+<strong>Bard PvP Basics Guide</strong> - <a href="https://bit.ly/3DNTS8E">https://bit.ly/3DNTS8E</a>
+
+<strong>Hotbar layout examples</strong> - <a href="https://imgur.com/a/EJf3UTR">https://imgur.com/a/EJf3UTR</a></span> <span class=chatlog__edited-timestamp title="04-Jan-23 11:54 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923923378153353296 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923923378153353296><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:01 AM">00:01</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923923377633251370/OpenersX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923923377633251370/OpenersX.png alt="Image attachment" title="Image: OpenersX.png (9.06 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923416833204274 class=chatlog__message-container data-message-id=923923416833204274><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:01 AM">00:01</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Endwalker opener - <a href="https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png">https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png</a>
+
+<strong>Opener notes:</strong>
+
+:: Use Pitch Perfect at three stacks as able, Bloodletter as able, and Refulgent procs as you get them.
+:: Hold Barrage until the next GCD if you already have an Refulgent proc.
+:: Burn any remaining PP stacks after Iron Jaws, before buffs expire.
+:: The best potion as of 6.2 is high-quality Grade 7 Tincture of Dexterity.
+
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>Opener FAQ</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> 
+
+<strong>Is it really okay to use Radiant Finale for only 2% in the opener?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Yes, by the next two-minute burst you will have gotten three more coda.
+</div></div>
+
+<strong>Should I use Refulgent Arrow between Stormbite and Caustic Bite if I get a proc?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">No, getting both DoTs up as soon as possible is slightly better.
+</div></div>
+
+<strong>I’ve heard about using Tinctures at two minutes, why is it here?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">This is just a default opener if you don’t know the fight length. If you’re certain the fight will last 8:30-9:15 or so (accounting for downtime), you will want to Tincture at two and eight minutes. The opener burst lacks Apex/Blast Arrow and only has a 2% Radiant Finale, so it&#39;s best to have Tinctures on full-powered bursts when it doesn&#39;t cost a usage.
+</div></div>
+<a href="https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png">https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png</a></span> <span class=chatlog__edited-timestamp title="05-Oct-22 07:02 AM">(edited)</span></div><div class=chatlog__embed><a href=https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png> <img class=chatlog__embed-generic-image src=https://media.discordapp.net/attachments/580961239581327360/1022530460137570364/brd_opener.png alt="Embedded image" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923489088491530 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923923489088491530><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:02 AM">00:02</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923923488484507658/RotationX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923923488484507658/RotationX.png alt="Image attachment" title="Image: RotationX.png (10.38 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923523515338753 class=chatlog__message-container data-message-id=923923523515338753><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:02 AM">00:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>Single target FAQ</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> 
+
+<strong>How do we get Repertoire?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">While you have a song active, you have an 80% chance to get a Repertoire when the song timer hits 42, 39, 36, etc. down to 3 seconds. 
+
+Note that this makes the last 3 seconds of each song &#39;empty&#39;, so you&#39;re free to leave at any point the timer reads 3 or less.
+</div></div>
+
+<strong>What order do we use our songs in?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Try to do ~43s of WM, ~34s of MB, and ~43s of AP. 
+
+In practice, this means leaving WM at 3s or less on the timer (use any Pitch Perfect stacks first!). Then leave MB at 12s left or less, and leave AP once WM is available again.
+</div></div>
+
+<strong>Why do we use Mage&#39;s Ballad second if it&#39;s the weakest song?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">1. We want the Army&#39;s Muse buff to land on our 2-minute burst to get an extra GCD under (some) buffs. 
+2. MB has the stronger party buff to have running when players use their 60-second damage cooldowns. 
+
+Don&#39;t forget that Mage&#39;s Ballad is only <em>very slightly</em> weaker than Army&#39;s. It&#39;s plenty worth taking these gains.
+</div></div>
+
+<strong>What&#39;s the best time to use Apex Arrow?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Ideally, you want to treat it as a pseudo-60s cooldown so that every other one lands in buffs. 
+
+At around 21-19s left in Mage&#39;s Ballad, fire it off so long as you have 80 gauge or more. If you get 100 gauge earlier than that, you can Apex then too.
+
+Then, hold on to it until all of your 2-minute buffs are up in Wanderer&#39;s Minuet. Even if it hits 100 well in advance of this, just sit on it. It&#39;s not worth throwing the timing off.
+</div></div>
+
+<strong>How do I handle the two-minute burst window?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Start by late-weaving Wanderer&#39;s Minuet, this is to make sure you can get five GCDs under Army&#39;s Muse.
+
+If you&#39;ve kept Empyreal Arrow on a tight cooldown, you can RS+EA in the next window to keep the EA cooldown rolling. 
+Otherwise, late-weave Raging Strikes and use Empyreal when able. You could be close to capped on Bloodletter there as well; if so use it.
+
+Then in the third window, use Battle Voice + Radiant Finale. The three buffs should all be ending around the same time this way.
+
+During this stack of buffs, you want to use: Apex Arrow, Blast Arrow, Barrage + Refulgent Arrow, and Iron Jaws. 
+For oGCDs: Sidewinder, an Empyreal Arrow, any Pitch Perfect 3s you get, and ideally three Bloodletters after saving a couple during Army&#39;s Paeon. 
+Try also to burn any remaining Pitch Perfect stacks before buffs expire.
+
+An <em>example</em> sequence might be:
+<a href="https://cdn.discordapp.com/attachments/580961239581327360/942275135581331466/BRD_BURST_2.png">https://cdn.discordapp.com/attachments/580961239581327360/942275135581331466/BRD_BURST_2.png</a>
+</div></div>
+
+<strong>Do I delay Empyreal Arrow if I have two Pitch Perfect stacks and a tick coming up?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">No, use a 2-stack Pitch Perfect instead. Ideally, use it as soon as you get that tick before the EA, so that you can press EA without delay.
+</div></div>
+
+<strong>Should I use Iron Jaws under buffs?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Yes. When you use Iron Jaws, the full run of DoT ticks gains all buffs and debuffs that were active at the time of IJ&#39;s use. This makes it well worth using it early to catch the 2-minute window.
+</div></div>
+
+<strong>When do I use Tinctures?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Like many jobs, if the fight lasts long enough to use a Tincture at 2 minutes and 8 minutes, do that. Otherwise, use one pre-pull and the next at 6 minutes.
+</div></div>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>AoE FAQ</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> 
+
+<strong>What songs do I use in dungeons?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">All of them. As always, try to have a song up at all times. 
+
+Mage&#39;s Ballad is going to be the strongest song in AoE, but you have bosses to fight as well. Usually players just stick to the standard song order and buff alignment.
+</div></div>
+
+<strong>Should I use Stormbite and Caustic Bite on trash pulls?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">If you can’t hit three or more targets with Ladonsbite, put Stormbite on things (then Caustic if needed) until you can.
+</div></div>
+
+<strong>How does Barrage work with Shadowbite?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">It increases the potency by 100, and consumes the Barrage buff. It&#39;s a gain over Barrage&#39;ing RA on 4 or more targets.</div></div></span> <span class=chatlog__edited-timestamp title="13-Feb-22 03:46 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923923565483552788 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923923565483552788><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:02 AM">00:02</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923923564825042944/GearX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923923564825042944/GearX.png alt="Image attachment" title="Image: GearX.png (9.54 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923596471054388 class=chatlog__message-container data-message-id=923923596471054388><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:02 AM">00:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>i630 Best In Slot Gear + Food</strong> - <a href="https://etro.gg/gearset/2a242f9b-8a41-4d09-9e14-3c8fb08e97e4">https://etro.gg/gearset/2a242f9b-8a41-4d09-9e14-3c8fb08e97e4</a>
+
+
+<strong>6.3 Starting-out Gear + Food</strong> - <a href="https://etro.gg/gearset/c52da8fd-8bb9-44ee-bc3d-a62cd5c31e91">https://etro.gg/gearset/c52da8fd-8bb9-44ee-bc3d-a62cd5c31e91</a>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">A set of gear you can feasibly attain via market board and tomes when just starting out as a level 90 Bard
+</div></div>
+
+<strong>Dragonsong&#39;s Reprise (prog) Best in Slot</strong> - <a href="https://etro.gg/gearset/384802e4-6112-4882-9670-5e332688713f">https://etro.gg/gearset/384802e4-6112-4882-9670-5e332688713f</a>
+
+
+<strong>Very, very basic gear calc</strong> - <a href="https://bit.ly/3ZpzpPU">https://bit.ly/3ZpzpPU</a>
+
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>Gear Set FAQ</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png">
+
+<strong>Should I buy the tome weapon?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Only you can decide. If you have the upgrade item, the weapon is the most tome-efficient boost you can get. But, if doing Savage your plan is to replace it eventually, so you&#39;re delaying your BiS completion by a week. If you think you need the damage output in the short term, or just don&#39;t mind the delay, then go for it. 
+
+If you can&#39;t upgrade it, you can do just as well with an upgraded crafted bow, or even better with the 6.3 EX trial bow.
+</div></div>
+
+<strong>What if I&#39;m not going to get crafted gear and/or pentameld it?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Follow the basic priority in Stats &amp; Melds below.
+</div></div>
+<strong>What if I got (gear piece)?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Follow the basic priority in Stats &amp; Melds below.
+</div></div>
+<strong>What if I&#39;m not doing Savage?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Follow the basic priority in Stats &amp; Melds below.
+</div></div>
+<strong>What if &lt;any weird scenario here&gt;?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Follow the basic priority in Stats &amp; Melds below.
+</div></div>
+It&#39;s simply not realistic to prepare a micro-optimized meld list for every conceivable gear permutation, and frankly the differences are tiny anyway. 
+
+You could take the old i600 BiS, meld red materia at random, eat the wrong food, and swap in the tome chest, and only lose ~0.2% damage.
+
+If you have a set where micro-optimizing really interests you anyway, you can play around in etro yourself to check stat tiering, and read up on stats at allagan studies - <a href="https://www.akhmorning.com/allagan-studies/stats/#player-stats-overview">https://www.akhmorning.com/allagan-studies/stats/#player-stats-overview</a>
+
+
+<strong>What is (old ultimate) BiS?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Wearing current gear and letting it sync down will be optimal or close enough not to matter. The most important stat in those fights is HP, and syncing down will max that out. The dps checks are far easier than they were on release, and they were largely easy even then.
+
+The one piece that&#39;s a non-trivial upgrade is the Shadowbringers i535 relic; if you set that to the ultimate&#39;s substat caps (127 - 136 - 184 for UCoB - UWU - TEA respectively) you can get more substats after sync than would otherwise be possible. This is a ~1.5-2% gain.
+</div></div>
+
+<strong>What food do we use?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Carrot Pudding is our new food for 6.2.
+</div></div>
+
+<strong>Does Bard have a target Skill Speed?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">It isn&#39;t crucial, but Being at 2.48 or 2.47 makes it feasible to keep Empyreal Arrow on cooldown without it running into your GCD, while also minimizing song cycle drift. 
+</div></div>
+
+<strong>Why are there melds that don&#39;t follow the stat priority?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">If you look at the Stats and Tiers table on Etro, you&#39;ll see that in FFXIV stats do not provide consistent benefits. Instead, every 13-14 points of Det adds +0.1% to your Det multiplier, every 9-10 points adds to Crit, etc.
+
+Because materia gives +36 or +12, it doesn&#39;t neatly line up with this. So i.e. a Det X materia could give you +0.2% or +0.3%. The former is far less efficient, to where melding DH X can be slightly better.
+</div></div>
+
+<strong>Is piece x better than piece y?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">The higher item level piece is better. If they&#39;re the same ilvl, the one with better substats (see Stats &amp; Melds) is better. 
+
+A piece with more total substats (i.e. five meld slots) can be better than one the next ilvl step up, but usually they&#39;re roughly equal at best and you lose HP for it.</div></div></span> <span class=chatlog__edited-timestamp title="21-Jan-23 11:56 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923923636610535465 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923923636610535465><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:02 AM">00:02</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923923635973005342/StatsMeldsX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923923635973005342/StatsMeldsX.png alt="Image attachment" title="Image: StatsMeldsX.png (11.62 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923923961241272361 class=chatlog__message-container data-message-id=923923961241272361><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:03 AM">00:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>If you&#39;re pursuing BiS, follow the BiS set and melds. 
+
+Otherwise, use these priorities for gear and melds:
+
+<u>ITEM LEVEL ( = Weapon Damage and Dexterity) is top priority!!</u>
+<strong>Even over pentamelds. Getting more major stats is better.</strong>
+
+Substats
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">1. Critical Hit 
+2. Determination
+3. Direct Hit
+4. Skill Speed
+</div></div>
+The top three are all <strong>VERY</strong> close, with skill speed a bit further behind. If you have very low crit before melds (&lt; ~1200), it&#39;s not worth melding.
+
+Make sure to stay under the substat cap when melding! If the number on the meld menu is red (by more than 1-2 points) don&#39;t do it.
+
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <u><strong>Stats FAQ</strong></u> <img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png">
+
+<strong>Is piece x better than piece y?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">The higher item level piece is better. If they&#39;re the same ilvl, the one with better substats (see priorities above) is better. 
+
+A piece with more total substats (i.e. pentamelded) can be better than one the next ilvl step up, but usually they&#39;re roughly equal at best and you lose HP for it.
+</div></div>
+
+<strong>Does Bard have a target Skill Speed?</strong>
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Yes and no. While it&#39;s not crucial, being at 2.48 or 2.47 makes it feasible to keep Empyreal Arrow on cooldown without it running into your GCD, while also minimizing song cycle drift. 
+
+This is for optimized play though - for general purposes / just trying to clear fights, don&#39;t worry about playing at other Skill Speeds.</div></div></span> <span class=chatlog__edited-timestamp title="01-Feb-22 11:16 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923924056842051615 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=923924056842051615><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:04 AM">00:04</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923924056259039282/FightTipsX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923924056259039282/FightTipsX.png alt="Image attachment" title="Image: FightTipsX.png (11.64 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923924077889093672 class=chatlog__message-container data-message-id=923924077889093672><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:04 AM">00:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+<strong>Check the threads in <span class="chatlog__markdown-mention">#brd_backstage_archive</span> for tips on current and other EW encounters</strong>
+
+Abyssos Fight Tips google doc anyway - <a href="https://bit.ly/3C90LPn">https://bit.ly/3C90LPn</a>
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+<strong>Legacy Ultimate (UCoB, UWU, TEA) tips here:</strong> <a href="https://bit.ly/3KbWDjN">https://bit.ly/3KbWDjN</a>
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---</span> <span class=chatlog__edited-timestamp title="05-Oct-22 03:31 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923924118938742856 class=chatlog__message-container data-message-id=923924118938742856><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:04 AM">00:04</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923924118729015326/ChangeX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923924118729015326/ChangeX.png alt="Image attachment" title="Image: ChangeX.png (10.58 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-923924138861674517 class=chatlog__message-container data-message-id=923924138861674517><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:04 AM">00:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>12/24/21 - Resources update for 6.01
+
+1/5/22 - 6.05 update: 
+i600 BiS 
+prog pentameld BiS 
+tome buy order
+lots of gear faq
+also! update to two minute burst FAQ to cover for perfect-Empyreal potential
+
+1/30/22 - Advanced Guide is up! Also various FAQ tweaks
+
+2/12/22 - smol update to recommend BV first (BV+RF instead of the reverse) on 2m bursts. BV should be up and you can get a seventh GCD under the second buff used so might as well make that the slightly better one.
+
+4/3/22 - swapped early tomestone buy order stuff for old ultimate bis faq
+
+4/24/22 - added legacy ultimate fight tips doc, and a footnote about ex trial 3
+
+7/11/22 - link to leveling guide added, sorry it took so long <img loading="lazy" class="chatlog__emoji " alt="sickmorning" title="sickmorning" src="https://cdn.discordapp.com/emojis/563678985859629056.png">
+
+8/23/22 - 6.2 BiS and Prog sets posted
+
+9/24/22 - Link to a basic PvP guide added, not actually much of an expert so suggestions / improvements welcome <img loading="lazy" class="chatlog__emoji " alt="blobmorning" title="blobmorning" src="https://cdn.discordapp.com/emojis/400028802480209920.png">
+
+1/11/23 - DSR Prog set updated, changed the 612 prog set to a 620 starter set. Also - baby very simple barebones gear calc added!</span> <span class=chatlog__edited-timestamp title="12-Jan-23 03:20 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-923924174433570847 class=chatlog__message-container data-message-id=923924174433570847><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="25-Dec-21 12:04 AM">00:04</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=https://cdn.discordapp.com/attachments/592614693810733078/923924174202892298/TableX.png> <img class=chatlog__attachment-media src=https://cdn.discordapp.com/attachments/592614693810733078/923924174202892298/TableX.png alt="Image attachment" title="Image: TableX.png (11.95 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-923924563799203840 class=chatlog__message-container data-message-id=923924563799203840><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/107256979105267712/51f93181919aa4ac2b552165fe864c95.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(175,179,255) title="Kupo Bot#2093" data-user-id=107256979105267712>Kupo Bot</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-923924563799203840>25-Dec-21 12:06 AM</a></span></div><div class=chatlog__embed><div class=chatlog__embed-color-pill style=background-color:rgba(26,188,156,255)></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><div class="chatlog__markdown chatlog__markdown-preserve">BRD Resources Navigation</div></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve"><img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923923325451919401" onclick="scrollToMessage(event, '923923325451919401')">Guides &amp; Hotbars</a>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923923378153353296" onclick="scrollToMessage(event, '923923378153353296')">Openers</a>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923923489088491530" onclick="scrollToMessage(event, '923923489088491530')">Rotation FAQ</a>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923923565483552788" onclick="scrollToMessage(event, '923923565483552788')">Gear Sets</a>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923923636610535465" onclick="scrollToMessage(event, '923923636610535465')">Stats &amp; Melds</a>
+
+<img loading="lazy" class="chatlog__emoji " alt="brd" title="brd" src="https://cdn.discordapp.com/emojis/847927311469641758.png"> <a href="https://discord.com/channels/277897135515762698/592614693810733078/923924056842051615" onclick="scrollToMessage(event, '923924056842051615')">Fight-specific Tips</a></div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-2.discordapp.net/external/jZQBbuAcmGkM28NV1MdwJrzL67pHhcH2Rv1_k5wg8tM/http/kupobot.com/static/images/kupobot-info-2.png> <img class=chatlog__embed-thumbnail src=https://images-ext-2.discordapp.net/external/jZQBbuAcmGkM28NV1MdwJrzL67pHhcH2Rv1_k5wg8tM/http/kupobot.com/static/images/kupobot-info-2.png alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 16 message(s)</div></div>
